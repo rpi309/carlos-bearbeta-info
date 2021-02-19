@@ -1,0 +1,155 @@
+<div class="game">
+  <div class="home-btn" (click)="homeClick()">Home</div>
+  <div
+    class="results"
+    [class.hidden]="resultMsg == ''"
+    *ngIf="stage == StageType.results"
+  >
+    {{ resultMsg }}
+  </div>
+  <div class="switch" *ngIf="stage == StageType.switchGame">
+    <div class="chooseGame-title">{{ UserIP }}</div>
+    <div class="higherLower-btn" (click)="HigherLowerClick()">
+      Higher Lower Game
+    </div>
+    <div class="higherLower-btn" (click)="findIPClick()">About You</div>
+    <div class="higherLower-btn" (click)="aboutClick()">About</div>
+  </div>
+
+  <div class="WhatsIp" *ngIf="stage == StageType.findIP">
+    <div
+      class="UserIP"
+      [class.hidden]="UserIP == ''"
+      *ngIf="stage == StageType.findIP"
+    >
+      You are on a {{ UserOS }} Browsing The Internet With {{ UserBrowser }}
+    </div>
+    <div
+      class="UserIP"
+      [class.hidden]="UserCity == ''"
+      *ngIf="stage == StageType.findIP"
+    >
+      You Live In the State/Region of {{ UserState }} Located in the
+      {{ UserPostal }}
+    </div>
+    <div
+      class="UserIP"
+      [class.hidden]="UserCity == ''"
+      *ngIf="stage == StageType.findIP"
+    >
+      Your Public IP of {{ UserIP }} is from the Internet Provider:
+      {{ UserCarrier }}
+    </div>
+  </div>
+  <div class="howToPlay" *ngIf="stage == StageType.howToPlay">
+    <div class="IntructionHeader">How To Play</div>
+    <div class="intructions">1. Press the 'Start Button'</div>
+    <div class="intructions">
+      2. Wait for the computer to genarate the Number
+    </div>
+    <div class="intructions">3. Enter Your Guess Between 1-100</div>
+    <div class="intructions">
+      4. The computer will then return too high, too low, or correct
+    </div>
+    <div class="intructions">
+      PS. There is a maximum limit of 10 attempts to guess the number
+    </div>
+    <div class="intructions1">
+      Side Note: Press the 'Home' icon on the top left-hand corner
+    </div>
+    <div class="intructions">
+      corner to go to the home page anytime in the game
+    </div>
+  </div>
+  <div class="stage1" *ngIf="stage == StageType.stage1">
+    <div class="game-title">Higher Lower Game</div>
+    <div class="start-btn" (click)="startClick()">Start</div>
+    <div class="info-btn" (click)="infoClick()">How To Play</div>
+  </div>
+  <div *ngIf="stage == StageType.form1">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSczhGYcxC4D6OpvIy4SD3LnKwjB3nst8FlzcAnYIOUa9w8Img/viewform?embedded=true"
+      width="640"
+      height="1000"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      >Loading…</iframe
+    >
+  </div>
+  <div class="about" *ngIf="stage == StageType.about">
+    <div class="higherLower-btn" (click)="versionClick()">Version 1.8</div>
+    <div class="higherLower-btn" (click)="rateClick()">Rate This Website</div>
+  </div>
+  <span>
+    <div
+      class="loadMessage"
+      [class.hidden]="loadMessage == ''"
+      *ngIf="stage == StageType.stage2"
+    >
+      {{ loadMessage }}
+    </div>
+  </span>
+  <div
+    class="always_appear"
+    *ngIf="
+      stage != StageType.stage1 &&
+      stage != StageType.howToPlay &&
+      stage != StageType.about &&
+      stage != StageType.form1 &&
+      stage != StageType.switchGame &&
+      stage != StageType.findIP &&
+      stage != StageType.VersionBlog
+    "
+    class="stage1"
+  >
+    <div class="input">
+      <input
+        type="number"
+        class="input"
+        [value]="guessNumber"
+        (keyup.enter)="sumbitClick()"
+        (change)="guessNumber = $event.target.value"
+      />
+    </div>
+    <div class="submit-btn" (click)="sumbitClick()">Submit</div>
+  </div>
+  <div class="VersionBlog" *ngIf="stage == StageType.VersionBlog">
+    <div class="versionHeader">Version 1.0: 2/8/2018</div>
+    <li class="points">Bought Domain</li>
+    <li class="points">Text at that time: "hi"</li>
+    <div class="versionHeader">Version 1.1: 5/8/2019</div>
+    <li class="points">Made Higher Lower Game</li>
+    <div class="versionHeader">Version 1.5: 9/1/2020</div>
+    <li class="points">Bug Fixes</li>
+    <li class="points">Added Resources Page</li>
+    <li class="points">Added IP Data Concept</li>
+    <li class="points">Added Home Button</li>
+    <div class="versionHeader">Version 1.6: 9/24/2020</div>
+    <li class="points">Game Bug Fixes</li>
+    <li class="points">Improved Upon IP Data; No Longer Concept</li>
+    <li class="points">Moved About Page From Game to Resources Page</li>
+    <li class="points">Removed Promo Code Form</li>
+    <li class="points">
+      No Longer Alerts if You Have the Correct Anwser, 'Too High' or 'Too Low'
+      Text Will Show If You Have the Correct Anwser
+    </li>
+    <li class="points">
+      You Can Press The 'Enter' Key to Submit Your Guess Instead of Clicking
+      'Submit' On the Screen
+    </li>
+    <li class="points">
+      Added Version History Page(What You Are On Right Now)
+    </li>
+    <div class="versionHeader">Version 1.7: 10/31/2020</div>
+    <li class="points">Bouncing Pumpkins</li>
+    <li class="points">Happy Halloween!!</li>
+    <div class="versionHeader">Version 1.8: 2/19/2020</div>
+    <li class="points">Game Bug Fixes</li>
+    <li class="points">Removed Bouncing Pumpkins, yes, ik, so late</li>
+  </div>
+
+  <div class="copyright">© 2020 Carlos Xiong V1.8</div>
+  <!-- <img class="pumkinPng" src="https://www.flaticon.com/svg/static/icons/svg/589/589793.svg"> -->
+  <!-- <img class="pumkinPng1" src="https://www.flaticon.com/svg/static/icons/svg/589/589793.svg"> -->
+</div>

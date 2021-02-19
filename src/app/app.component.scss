@@ -1,0 +1,367 @@
+$backGroundColor1: blue;
+$backGroundColor2: red;
+$textColor: white;
+$buttonLetterColor: #ffffff;
+$buttonBorderColor: white;
+$buttonHoverColor: #14a8ff;
+.game {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, $backGroundColor1, $backGroundColor2);
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 6pt white;
+  color: $textColor !important;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.switch {
+  margin: 0px auto;
+}
+
+//Choose Game----------------------------------------------------------------------
+// .pumkinPng {
+//     animation-delay: 1s;
+//     left: 20px;
+//     height: 120px;
+//     bottom: -20px;
+//     position: absolute;
+//     width: 120px;
+//     animation-duration: 2s;
+//     animation-iteration-count: infinite;
+//     transform-origin: bottom;
+//     animation-name: bounce-5;
+//     animation-timing-function: ease;
+// }
+
+// .pumkinPng1 {
+//     right: 20px;
+//     height: 120px;
+//     bottom: -20px;
+//     position: absolute;
+//     width: 120px;
+//     animation-duration: 2s;
+//     animation-iteration-count: infinite;
+//     transform-origin: bottom;
+//     animation-name: bounce-5;
+//     animation-timing-function: ease;
+// }
+
+// @keyframes new-item-animation {
+//     from {
+//         opacity: 0;
+//         transform: translateY(-1000px);
+//     }
+//     to {
+//         opacity: 1;
+//         transform: translateY(760px);
+//     }
+// }
+
+// @keyframes bounce-5 {
+//     0% {
+//         transform: scale(1, 1) translateY(0);
+//     }
+//     10% {
+//         transform: scale(1.1, .9) translateY(0);
+//     }
+//     30% {
+//         transform: scale(.9, 1.1) translateY(-100px);
+//     }
+//     50% {
+//         transform: scale(1.1, 0.9) translateY(0);
+//     }
+//     57% {
+//         transform: scale(1.1, .9) translateY(-7px);
+//     }
+//     64% {
+//         transform: scale(1.1, .9) translateY(0);
+//     }h
+//     100% {
+//         transform: scale(1, 1) translateY(0);
+//     }
+// }
+
+//STAGE ONE----------------------------------------------------------------------
+.chooseGame-title {
+  margin-top: 150pt;
+  margin-bottom: 5pt;
+  font-size: 40pt;
+}
+.chooseGame-subTitle {
+  margin: auto;
+  margin-bottom: 10pt;
+  font-size: 20pt;
+}
+.WhatsIp {
+  margin: 0px auto;
+  margin: 20% auto;
+  font-size: 20pt;
+}
+
+.UserIP {
+  margin: 0px auto;
+  margin: 0px auto;
+}
+
+.higherLower-btn {
+  margin: 0pt auto 10pt;
+  line-height: 1.5;
+  font-size: 10pt;
+  font-weight: 800;
+  justify-content: center;
+  border-radius: 100pt;
+  width: 120pt;
+  height: 20pt;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $buttonLetterColor;
+  border: solid 2pt $buttonBorderColor;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.higherLower-btn:hover {
+  border: solid 2pt $buttonHoverColor;
+  background-color: $buttonHoverColor;
+}
+
+.versionHeader {
+  margin-left: 60px;
+  font-size: 30pt;
+  margin-top: 10pt;
+}
+
+.points {
+  margin-left: 120px;
+  margin-bottom: 5px;
+}
+
+//STAGE ONE----------------------------------------------------------------------
+.stage1 {
+  margin: 0px auto;
+}
+
+.game-title {
+  margin-top: 200pt;
+  margin-bottom: 0pt;
+  font-size: 40pt;
+}
+
+.start-btn {
+  margin: 10pt auto 0pt;
+  line-height: 1.5;
+  font-size: 40pt;
+  font-weight: 200;
+  justify-content: center;
+  border-radius: 100pt;
+  width: 200pt;
+  height: 200pt;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $buttonLetterColor;
+  border: solid 2pt $buttonBorderColor;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.start-btn:hover {
+  border: solid 2pt $buttonHoverColor;
+  background-color: $buttonHoverColor;
+}
+
+.info-btn {
+  margin: 10pt auto 0pt;
+  line-height: 1.5;
+  font-size: 10pt;
+  font-weight: 800;
+  justify-content: center;
+  border-radius: 100pt;
+  width: 100pt;
+  height: 20pt;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $buttonLetterColor;
+  border: solid 2pt $buttonBorderColor;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.info-btn:hover {
+  border: solid 2pt $buttonHoverColor;
+  background-color: $buttonHoverColor;
+}
+
+//STAGE ONE----------------------------------------------------------------------
+//STAGE TWO----------------------------------------------------------------------
+.loadMessage {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 200pt;
+  font-size: 30pt;
+  width: fit-content;
+  height: fit-content;
+}
+
+.input {
+  margin: 0px auto;
+  width: auto;
+  height: 40pt;
+  border-radius: 15px;
+  font-size: 25pt;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.submit-btn {
+  margin: 10pt auto 0pt;
+  line-height: 1.5;
+  font-size: 25pt;
+  font-weight: 800;
+  justify-content: center;
+  border-radius: 100pt;
+  width: 100pt;
+  height: 50pt;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $buttonLetterColor;
+  border: solid 2pt $buttonBorderColor;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.submit-btn:hover {
+  border: solid 2pt $buttonHoverColor;
+  background-color: $buttonHoverColor;
+}
+
+//STAGE TWO----------------------------------------------------------------------
+.howToPlay {
+  margin: 0px auto;
+}
+
+.intructions {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.intructions1 {
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.IntructionHeader {
+  font-size: 40px;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.results {
+  font-size: 30pt;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  margin-top: 250px;
+}
+
+.about {
+  margin: 0px auto;
+  margin-top: 200px;
+  font-size: 20pt;
+}
+
+.about-btn {
+  margin: 10pt auto 0pt;
+  line-height: 1.5;
+  font-size: 10pt;
+  font-weight: 800;
+  justify-content: center;
+  border-radius: 100pt;
+  width: 100pt;
+  height: 18pt;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $buttonLetterColor;
+  border: solid 2pt $buttonBorderColor;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.home-btn {
+  line-height: 1.5;
+  font-size: 10pt;
+  font-weight: 800;
+  justify-content: center;
+  width: 40pt;
+  height: 40pt;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $buttonLetterColor;
+  border: solid 2pt #14a8ff;
+  background-color: #14a8ff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.home-btn:hover {
+  border: solid 2pt #000000;
+}
+
+.about-btn:hover {
+  border: solid 2pt $buttonHoverColor;
+  background-color: $buttonHoverColor;
+}
+
+.rate-btn {
+  margin: 10pt auto 0pt;
+  line-height: 1.5;
+  font-size: 10pt;
+  font-weight: 800;
+  justify-content: center;
+  border-radius: 100pt;
+  width: 100pt;
+  height: 18pt;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $buttonLetterColor;
+  border: solid 2pt $buttonBorderColor;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.rate-btn:hover {
+  border: $buttonHoverColor;
+  background-color: $buttonHoverColor;
+}
+
+.form1 {
+  margin: 0px auto;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
+}
+
+.form2 {
+  margin: 0px auto;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
+}
